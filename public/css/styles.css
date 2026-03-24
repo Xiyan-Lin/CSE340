@@ -1,6 +1,106 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+/* 🔹 基本設定 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+}
+
+#wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* 🔹 Header */
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 🔹 Nav */
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  background: #2d2d44;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* 🔹 Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text {
+  color: #00a3c4;
+}
+
+.hero button {
+  background: #00a3c4;
+  border: none;
+  padding: 10px;
+  color: white;
+  margin-top: 10px;
+}
+
+/* 🔹 Image */
+.hero-img img {
+  width: 100%;
+}
+
+/* 🔹 Content */
+.content {
+  margin-top: 20px;
+}
+
+/* 🔹 Upgrades Grid */
+.upgrade-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.upgrade-grid div {
+  text-align: center;
+  background: #00a3c4;
+  padding: 10px;
+}
+
+.upgrade-grid img {
+  width: 80px;
+}
+
+/* 🔹 Footer */
+footer {
+  margin-top: 20px;
+}
+
+/* 🔥 Desktop (Media Query) */
+@media screen and (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    gap: 20px;
+  }
+
+  .reviews, .upgrades {
+    flex: 1;
+  }
 }
