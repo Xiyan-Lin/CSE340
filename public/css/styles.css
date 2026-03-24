@@ -40,25 +40,39 @@ nav a {
 
 /* 🔹 Hero */
 .hero {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
+/* 圖片 */
+.hero-img img {
+  width: 100%;
+  display: block;
+}
+
+/* 🔥 文字蓋在圖片上 */
 .hero-text {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  background: rgba(255, 255, 255, 0.7); /* 半透明 */
+  padding: 15px;
   color: #00a3c4;
+  max-width: 250px;
 }
 
+/* 清單 */
+.hero-text ul {
+  padding-left: 20px;
+}
+
+/* 按鈕 */
 .hero button {
   background: #00a3c4;
   border: none;
-  padding: 10px;
+  padding: 10px 15px;
   color: white;
   margin-top: 10px;
-}
-
-/* 🔹 Image */
-.hero-img img {
-  width: 100%;
+  cursor: pointer;
 }
 
 /* 🔹 Content */
@@ -70,17 +84,27 @@ nav a {
 .upgrade-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 20px;
 }
 
 .upgrade-grid div {
-  text-align: center;
   background: #00a3c4;
-  padding: 10px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #333;
 }
 
 .upgrade-grid img {
-  width: 80px;
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.upgrade-grid a {
+  display: block;
+  color: blue;
+  text-decoration: underline;
 }
 
 /* 🔹 Footer */
