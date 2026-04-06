@@ -128,3 +128,32 @@ footer {
     flex: 1;
   }
 }
+
+.vehicle-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vehicle-detail img {
+  width: 100%;
+}
+
+.vehicle-info {
+  padding: 10px;
+}
+
+/* 大螢幕 */
+@media (min-width: 768px) {
+  .vehicle-detail {
+    flex-direction: row;
+  }
+
+  .vehicle-detail img {
+    width: 50%;
+  }
+
+  .vehicle-info {
+    width: 50%;
+  }
+}
