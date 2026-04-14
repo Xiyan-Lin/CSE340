@@ -1,0 +1,67 @@
+<h1><%= title %></h1>
+
+<!-- 🔥 Flash message -->
+<%- messages() %>
+<% if (errors) { %>
+  <ul class="notice">
+ <% errors.array().forEach(error => { %>
+   <li><%= error.msg %></li>
+<%  }) %>
+ </ul>
+<% } %>
+
+<section class="register-container">
+  <form action="/account/register" method="post">
+
+    <!-- First Name -->
+    <label for="account_firstname">First Name</label>
+    <input 
+      type="text"
+      id="account_firstname"
+      name="account_firstname"
+      required
+      value="<%= locals.account_firstname || '' %>"
+    >
+
+    <!-- Last Name -->
+    <label for="account_lastname">Last Name</label>
+    <input 
+      type="text"
+      id="account_lastname"
+      name="account_lastname"
+      required
+      value="<%= locals.account_lastname || '' %>"
+    >
+
+    <!-- Email -->
+    <label for="account_email">Email Address</label>
+    <input 
+      type="email"
+      id="account_email"
+      name="account_email"
+      required
+      value="<%= locals.account_email || '' %>"
+    >
+
+    <!-- Password -->
+    <label for="account_password">Password</label>
+    <input 
+      type="password"
+      id="account_password"
+      name="account_password"
+      required
+      placeholder="Enter a secure password"
+      pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$"
+      title="Must be at least 12 characters, include 1 uppercase, 1 number, and 1 special character"
+    >
+
+    <!-- 🔥 Password rules -->
+    <small class="password-rules">
+      Password must be at least 12 characters long, include at least one uppercase letter, one number, and one special character.
+    </small>
+
+    <!-- Submit -->
+    <button type="submit">Register</button>
+
+  </form>
+</section>
