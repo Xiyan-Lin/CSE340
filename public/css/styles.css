@@ -340,3 +340,101 @@ input:focus, select:focus {
 .select-box select {
   width: 100%;
 }
+
+/* 🔹 Review Section */
+.review-title {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.review-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 🔹 每一張評論卡 */
+.review-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+}
+
+/* 🔹 header */
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.review-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.review-stars {
+  color: #f5b301;
+}
+
+/* 🔹 comment */
+.review-comment {
+  margin: 10px 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* 🔹 footer */
+.review-footer {
+  text-align: right;
+  color: #888;
+  font-size: 12px;
+}
+
+/* 🔹 無評論 */
+.no-review {
+  color: #888;
+  font-style: italic;
+}
+
+/* 🔹 分隔線 */
+.review-divider {
+  margin: 30px 0;
+}
+
+/* 🔹 表單 */
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.review-form button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.review-form button:hover {
+  background: #0056b3;
+}

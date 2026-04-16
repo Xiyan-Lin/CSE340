@@ -3,6 +3,8 @@ const express = require("express")
 const router = new express.Router() 
 const invController = require("../controllers/invController")
 const errorController = require("../controllers/errorController")
+const reviewController = require("../controllers/reviewController")
+
 const utilities = require("../utilities/")
 const invValidate = require("../utilities/inventory-validation")
 const upload = require("../utilities/upload") 
@@ -44,6 +46,11 @@ router.post(
   invValidate.inventoryRules(),
   invValidate.checkInventoryData,
   utilities.handleErrors(invController.addInventory)
+)
+
+router.post(
+  "/review",
+  utilities.handleErrors(reviewController.addReview)
 )
 
 module.exports = router;

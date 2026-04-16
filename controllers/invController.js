@@ -1,4 +1,5 @@
 const invModel = require("../models/inventory-model")
+const reviewModel = require("../models/review-model")
 const utilities = require("../utilities/")
 const sharp = require("sharp")
 const path = require("path")
@@ -26,10 +27,13 @@ invCont.buildByInventoryId = async function (req, res, next) {
   const data = await invModel.getInventoryById(inv_id)
   const nav = await utilities.getNav()
   const detailHTML = await utilities.buildDetailView(data)
+  const reviews = await reviewModel.getReviewsByInvId(inv_id)
   res.render("./inventory/detail", {
     title: `${data.inv_make} ${data.inv_model}`,
     nav,
-    detailHTML
+    detailHTML,
+    reviews,
+    inv_id: inv_id
   })
 }
 
